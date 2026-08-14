@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMKM Desa - Kelurahan Kedungrejo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* =========================================================
+     STYLING MENU BAHASA (SISTEM KLIK & DROPDOWN)
+     ========================================================= */
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .nav-dropdown .nav-link {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 100%;
+    right: 0;
+    margin-top: 12px;
+    padding: 6px 0;
+  }
+  .dropdown-content.show {
+    display: block;
+  }
+  .dropdown-content a {
+    color: #1a1a1a;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+  .dropdown-content a:hover {
+    background-color: #f0f7f4;
+    color: var(--hijau-tua);
+  }
+
+  /* Sembunyikan widget asli Google Translate */
+  #google_translate_element {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  .skiptranslate iframe { display: none !important; }
+  body { top: 0 !important; }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="navbar-left" style="text-decoration: none; color: inherit;">
+    <img src="logo-wonogiri (1).png" alt="Logo Kabupaten Wonogiri" class="logo">
+    <div class="brand-text">
+      <h1>Kelurahan Kedungrejo</h1>
+      <p>Kabupaten Wonogiri</p>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="navbar-right" id="navMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="profil.html" class="nav-link">Profil Desa</a>
+    <a href="infografis.html" class="nav-link">Infografis</a>
+    <a href="umkm.html" class="nav-link active">UMKM</a>
+    <a href="lokasi.html" class="nav-link">Lokasi</a>
+    <a href="berita.html" class="nav-link">Berita</a>
+    <a href="https://dinaspmd.wonogirikab.go.id/ppid/informasi-berkala/" target="_blank" class="nav-link">PPID</a>
+    
+    <!-- MENU BAHASA SESUAI CONTOH GAMBAR -->
+    <div class="nav-dropdown">
+      <span class="nav-link" id="langToggle">🌐 Bahasa &#9662;</span>
+      <div class="dropdown-content" id="langDropdown">
+        <a href="javascript:void(0);" onclick="translatePage('id')">Indonesia</a>
+        <a href="javascript:void(0);" onclick="translatePage('en')">English</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero hero-profil">
+  <!-- Background telah diganti ke foto gapura DSC08044.jpg -->
+  <div class="hero-slide" style="background-image: url('DSC08044.jpg'); background-position: center 65%;"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Potensi & UMKM</h2>
+    <p>Katalog Usaha Mikro Kecil dan Menengah (UMKM) serta Potensi Lokal Kedungrejo</p>
+  </div>
+</section>
+
+<section class="profil-content">
+  <div class="profil-box">
+    <h2 style="color: var(--hijau-tua); text-align: center; margin-bottom: 10px;">Katalog UMKM Kelurahan</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Temukan berbagai potensi usaha lokal yang dikategorikan berdasarkan pembagian lingkungan di Kelurahan Kedungrejo.</p>
+    
+    <!-- ========================================== -->
+    <!-- KATEGORI: LINGKUNGAN MELIKAN               -->
+    <!-- ========================================== -->
+    <h3 style="color: var(--hijau-tua); border-bottom: 2px solid var(--hijau-widget); padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; font-size: 1.4rem;">
+      &#128205; Lingkungan Melikan
+    </h3>
+    <div class="umkm-grid" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      
+      <!-- Betal Makmur -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=3WHX%2BHCH,+Jl.+Wonogiri+-+Pacitan,+Melikan,+Kedungrejo,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127976;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Toko Bangunan Betal Makmur</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Penyuplai utama aneka macam material proyek dan perabot pembangunan di Melikan dengan harga bersaing untuk mendukung infrastruktur warga.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3WHX%2BHCH,+Jl.+Wonogiri+-+Pacitan,+Melikan,+Kedungrejo,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- OLEH OLEH KHAS WONOGIRI -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=3XH4%2BMF4,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127873;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Keripik Tempe "Mbok Yani"</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Memproduksi oleh-oleh keripik tempe khas daerah yang tipis, gurih, dan sangat renyah. Incaran utama wisatawan dan pemudik di daerah Wonogiri.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3XH4%2BMF4,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- UD Mebel Sari Putra -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=UD+Mebel+Sari+Putra,Melikan,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128715;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">UD Mebel Sari Putra</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Pusat penyedia berbagai perabotan rumah tangga kayu berkualitas. Menawarkan furnitur kokoh dan elegan untuk mempercantik hunian keluarga.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3WHX%2BGMM,+Nadi,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- betalboys distro -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=betalboys+distro,Melikan,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128085;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Betalboys Distro</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Toko pakaian trendi yang menyediakan gaya fesyen terkini untuk anak muda. Temukan *outfit* modis favoritmu tanpa harus bepergian jauh ke kota.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=betalboys+distro,+Jl.+Wonogiri+-+Pacitan+No.km.25,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Sri Widodo -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Sri+Widodo,Melikan,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128188;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Toko Sri Widodo</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Lokasi unit usaha strategis yang memfasilitasi kebutuhan warga masyarakat maupun pelintas kota. Berperan penting dalam roda ekonomi Kedungrejo.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3WHX%2BGHQ,+Jl.+Wonogiri+-+Pacitan,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Betal Bite x Tentang Rasa -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Betal+Bite+x+Tentang+Rasa,Melikan,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127828;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Betal Bite x Tentang Rasa</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Destinasi kuliner kekinian yang *cozy*. Menawarkan ragam makanan *bite-size*, camilan ringan, hingga minuman segar untuk teman nongkrong asyik.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Betal+Bite+x+Tentang+Rasa,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- KATEGORI: LINGKUNGAN PUCUNG                -->
+    <!-- ========================================== -->
+    <h3 style="color: var(--hijau-tua); border-bottom: 2px solid var(--hijau-widget); padding-bottom: 8px; margin-top: 50px; margin-bottom: 20px; font-size: 1.4rem;">
+      &#128205; Lingkungan Pucung
+    </h3>
+    <div class="umkm-grid" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      
+      <!-- Pasar Nguntoronadi -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Pasar+Nguntoronadi,Jl.+Raya+Solo+-+Pacitan,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127978;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Pasar Nguntoronadi</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Jantung penggerak ekonomi warga yang berlokasi di jalan utama. Pusat transaksi tradisional untuk kebutuhan harian, sayuran segar, dan lauk pauk.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3XH3%2B34J,+Pasar+Nguntoronadi,+Jl.+Raya+Solo+-+Pacitan,+Pucung,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- TOKO LILO BETAL -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=3XH2%2B2XW,+Pucung,+Kedungrejo,+Nguntoronadi,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128722;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">TOKO LILO BETAL</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Pusat belanja kelontong di Pucung. Menyediakan sembako, makanan ringan, dan keperluan rumah tangga yang lengkap dengan pelayanan ramah.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3XH2%2B2XW,+Pucung,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- TOKO KELONTONG ACI -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=TOKO+KELONTONG+ACI,Pucung,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128722;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Toko Kelontong Aci</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Pusat perbelanjaan kebutuhan pokok mulai dari sembako, makanan ringan, dan kebutuhan dapur lengkap. Menawarkan harga merakyat nan bersahabat.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3WHX%2BGVJ,+Jalan+Wonogiri+-+Pacitan+Melikan,+Pucung,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Apotek Navy Farma -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Apotek+Navy+Farma,Melikan,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128138;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Apotek Navy Farma</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Garda terdepan fasilitas kesehatan warga. Menyediakan obat-obatan, vitamin, serta perlengkapan P3K yang lengkap untuk menjaga kesehatan keluarga.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Apotek+Navy+Farma,+Pucung,+Melikan,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Service handphone WONGHAPE -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Service+handphone+WONGHAPE,Pucung,Kedungrejo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128241;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Service HP WONGHAPE</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Solusi tepat dan terpercaya untuk perbaikan perangkat gawai Anda. Menyediakan jasa servis kerusakan *smartphone* hingga penjualan aksesori.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Service+handphone+WONGHAPE,+Nadi+rt01+rw02,+Pucung,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- KATEGORI: LINGKUNGAN NADI                  -->
+    <!-- ========================================== -->
+    <h3 style="color: var(--hijau-tua); border-bottom: 2px solid var(--hijau-widget); padding-bottom: 8px; margin-top: 50px; margin-bottom: 20px; font-size: 1.4rem;">
+      &#128205; Lingkungan Nadi
+    </h3>
+    <div class="umkm-grid" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      
+      <!-- Warung Makan Mbh Kliwon -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=3WHX%2BCWQ,+Nadi,+Kedungrejo,+Nguntoronadi,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127869;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Warung Makan Mbh Kliwon</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Tempat bersantap tradisional di Lingkungan Nadi yang konsisten menyajikan aneka menu masakan rumahan dengan harga yang sangat terjangkau.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=3WHX%2BCWQ,+Nadi,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- KATEGORI: LINGKUNGAN GODANG & TUKUL        -->
+    <!-- ========================================== -->
+    <h3 style="color: var(--hijau-tua); border-bottom: 2px solid var(--hijau-widget); padding-bottom: 8px; margin-top: 50px; margin-bottom: 20px; font-size: 1.4rem;">
+      &#128205; Lingkungan Godang & Tukul
+    </h3>
+    <div class="umkm-grid" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      
+      <!-- AR'S Barbershop -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=AR'S+Barbershop,+Godang,+Kedungrejo,+Nguntoronadi,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128136;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">AR'S Barbershop</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Layanan pangkas rambut pria dengan gaya modern di Godang. Didukung oleh *barberman* berpengalaman untuk menjaga penampilan tetap rapi dan kekinian.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=AR'S+Barbershop,+Godang,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- KR apparel -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=KR+apparel,+Godang,+Kedungrejo,+Nguntoronadi,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#128085;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">KR Apparel</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Wadah kreatif pemuda lokal di bidang fesyen. Melayani pembuatan produk pakaian dan jasa sablon desain kekinian dengan jahitan yang rapi berkualitas.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=KR+apparel,+Godang,+Kedungrejo,+Nguntoronadi,+Wonogiri" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- KATEGORI: LOKASI UMUM / LAINNYA            -->
+    <!-- ========================================== -->
+    <h3 style="color: var(--hijau-tua); border-bottom: 2px solid var(--hijau-widget); padding-bottom: 8px; margin-top: 50px; margin-bottom: 20px; font-size: 1.4rem;">
+      &#128205; Area Pusat Kelurahan & Lainnya
+    </h3>
+    <div class="umkm-grid" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      
+      <!-- Warung Makan Mbak Yekti -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Warung+Makan+Mbak+Yekti,Kedungrejo,Nguntoronadi,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127869;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Warung Makan Mbak Yekti</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Menyajikan aneka hidangan masakan rumahan khas Nusantara yang lezat, higienis, dan kaya rempah. Menjadi tempat favorit warga sekitar dengan harga yang bersahabat.
+          </p>
+          <a href="https://share.google/TAJdmWVIKHMOnWb8o" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Warung Mie Bakso PRISO BETAL -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Warung+Mie+Bakso+PRISO+BETAL,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127836;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Mie Bakso PRISO BETAL</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Menyajikan mie dan bakso urat dengan kuah kaldu sapi asli yang menggugah selera. Porsi memuaskan, cocok untuk menghangatkan suasana saat melintas.
+          </p>
+          <a href="https://www.google.com/maps/place/Warung+Mie+Bakso+PRISO+BETAL+Kabupaten+Wonogiri/data=!4m2!3m1!1s0x2e7a2cd6ee895c65:0xed3d2a94f826b37d?sa=X&ved=1t:242&hl=id-ID&ictx=111" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Warung Bu Martini -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Warung+Bu+Martini,Kedungrejo,Nguntoronadi,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127869;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Warung Bu Martini</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Menyediakan sajian kuliner sederhana lezat khas masakan rumahan dengan harga yang sangat terjangkau. Suasana kekeluargaan menjadikan warung ini selalu ramai.
+          </p>
+          <a href="https://www.google.com/maps/place/Warung+Bu+Martini/data=!4m2!3m1!1s0x0:0x6234d764ca871e66?sa=X&ved=1t:2428&hl=id-ID&ictx=111" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- RM Padang Salero Bundo -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Rumah+Makan+Padang+Salero+Bundo,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127869;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">RM Padang Salero Bundo</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Menghadirkan cita rasa autentik Minangkabau. Menyediakan rendang sapi empuk, ayam pop, gulai tunjang, hingga sambal ijo yang siap menggugah selera Anda.
+          </p>
+          <a href="https://www.google.com/maps/place/Rumah+Makan+Padang+Salero+Bundo/data=!4m2!3m1!1s0x0:0xcdb72ee6f0082f00?sa=X&ved=1t:2428&hl=id-ID&ictx=111" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Mie Ayam Samidi -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Mie+Ayam+Samidi,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127836;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Mie Ayam Samidi</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Menyajikan perpaduan tekstur mie yang pas, topping ayam bumbu kecap yang melimpah, serta kaldu gurih. Hidangan merakyat yang jadi primadona di hati warga.
+          </p>
+          <a href="https://www.google.com/maps/place/Mie+Ayam+Samidi+Kabupaten+Wonogiri/data=!4m2!3m1!1s0x2e7a2d27bfb7cb11:0xfa0737f1ce1aad86?sa=X&ved=1t:242&hl=id-ID&ictx=111" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Soto Yusuf -->
+      <div class="umkm-card" style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+        <div style="width: 100%; height: 180px; background: #eee;">
+          <iframe src="https://www.google.com/maps?q=Soto+Yusuf,Kedungrejo,Nguntoronadi,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="display: flex; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 1.5rem; margin-right: 10px;">&#127836;</span>
+            <h3 style="color: var(--hijau-tua); margin: 0; font-size: 1.15rem; line-height: 1.3;">Soto Yusuf</h3>
+          </div>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+            Menyajikan hidangan soto berkuah segar, hangat, dan kaya rempah dengan irisan daging melimpah. Cocok untuk sarapan pagi maupun makan siang.
+          </p>
+          <a href="https://maps.app.goo.gl/mnBD7EEb4hfwG5AUA?g_st=aw" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: all 0.3s ease; border: 1px solid #d1e7dd;">
+            &#10148; Buka di Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Kelurahan Kedungrejo</h4>
+      <p>Kabupaten Wonogiri, Jawa Tengah</p>
+    </div>
+  </div>
+  <p class="footer-copy">KKN Tim 2 Universitas Diponegoro 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- ========================================================= -->
+<!-- WIDGET GOOGLE TRANSLATE (TERSEMBUNYI) & SCRIPT MENU KLIK  -->
+<!-- ========================================================= -->
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id', 
+      includedLanguages: 'en,id',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  // Fungsi Penerjemah ketika opsi bahasa diklik
+  function translatePage(langCode) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
+      // Menutup kotak dropdown setelah dipilih
+      document.getElementById("langDropdown").classList.remove("show");
+    } else {
+      setTimeout(function() { translatePage(langCode); }, 500);
+    }
+  }
+
+  // Fungsi Buka/Tutup Menu Dropdown Bahasa
+  var langToggle = document.getElementById("langToggle");
+  if(langToggle) {
+    langToggle.onclick = function(event) {
+      event.stopPropagation(); 
+      document.getElementById("langDropdown").classList.toggle("show");
+    };
+  }
+
+  // Menutup menu jika user mengklik area lain di luar menu
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('#langToggle')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains('show')) {
+          dropdowns[i].classList.remove('show');
+        }
+      }
+    }
+  });
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

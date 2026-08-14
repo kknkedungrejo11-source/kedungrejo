@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokasi Desa - Kelurahan Kedungrejo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* MENU BAHASA CUSTOM & WIDGET TERSEMBUNYI */
+  .nav-dropdown { position: relative; display: inline-block; margin-left: 5px; }
+  .nav-dropdown .nav-link { cursor: pointer; display: inline-flex; align-items: center; gap: 5px; user-select: none; }
+  .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 140px; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); z-index: 100; border-radius: 8px; overflow: hidden; top: 100%; right: 0; margin-top: 10px; }
+  .dropdown-content.show { display: block; }
+  .dropdown-content a { color: #333333; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; transition: background 0.3s ease; }
+  .dropdown-content a:hover { background-color: #f0f7f4; color: var(--hijau-tua); }
+  
+  #google_translate_element { position: absolute !important; left: -9999px !important; top: -9999px !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
+  .skiptranslate iframe { display: none !important; }
+  body { top: 0 !important; }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="navbar-left" style="text-decoration: none; color: inherit;">
+    <img src="logo-wonogiri (1).png" alt="Logo Kabupaten Wonogiri" class="logo">
+    <div class="brand-text">
+      <h1>Kelurahan Kedungrejo</h1>
+      <p>Kabupaten Wonogiri</p>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="navbar-right" id="navMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="profil.html" class="nav-link">Profil Desa</a>
+    <a href="infografis.html" class="nav-link">Infografis</a>
+    <a href="umkm.html" class="nav-link">UMKM</a>
+    <a href="lokasi.html" class="nav-link active">Lokasi</a>
+    <a href="berita.html" class="nav-link">Berita</a>
+    <a href="https://dinaspmd.wonogirikab.go.id/ppid/informasi-berkala/" target="_blank" class="nav-link">PPID</a>
+    
+    <!-- MENU BAHASA -->
+    <div class="nav-dropdown">
+      <span class="nav-link" id="langToggle">🌐 Bahasa &#9662;</span>
+      <div class="dropdown-content" id="langDropdown">
+        <a href="javascript:void(0);" onclick="translatePage('id')">Indonesia</a>
+        <a href="javascript:void(0);" onclick="translatePage('en')">English</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero hero-profil">
+  <!-- Langsung memanggil nama file DSC08110.jpg -->
+  <div class="hero-slide" style="background-image: url('DSC09035.jpg'); background-position: center;"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Peta & Lokasi</h2>
+    <p>Peta Wilayah Administratif dan Titik Lokasi Kelurahan Kedungrejo</p>
+  </div>
+</section>
+
+<!-- Konten Peta Lokasi -->
+<section class="profil-content" style="padding: 50px 5%; background-color: #f9f9f9;">
+  <div class="profil-box" style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); max-width: 1000px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2 style="color: var(--hijau-tua); margin-bottom: 10px; font-size: 2rem;">Peta Wilayah Kelurahan Kedungrejo</h2>
+      <p style="color: #666; font-size: 1.05rem;">Kecamatan Nguntoronadi, Kabupaten Wonogiri, Provinsi Jawa Tengah</p>
+    </div>
+
+    <!-- Tampilan Google Maps Lebar (Embed) -->
+    <div style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; border: 2px solid #eaeaea;">
+      <iframe src="https://www.google.com/maps?q=Kedungrejo,Nguntoronadi,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="https://www.google.com/maps/place/Kedungrejo,+Nguntoronadi,+Kabupaten+Wonogiri,+Jawa+Tengah" target="_blank" style="display: inline-block; background: var(--hijau-widget); color: #fff; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+        &#10148; Buka di Aplikasi Google Maps
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Kelurahan Kedungrejo</h4>
+      <p>Kabupaten Wonogiri, Jawa Tengah</p>
+    </div>
+    <div class="footer-contact">
+      <p>&#9742; (0273) 000-0000</p>
+      <p>&#9993; kedungrejo@wonogirikab.go.id</p>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Pemerintah Kelurahan Kedungrejo. Hak cipta dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- WIDGET GOOGLE TRANSLATE & SCRIPT -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id', 
+      includedLanguages: 'en,id',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translatePage(langCode) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
+      document.getElementById("langDropdown").classList.remove("show");
+    } else {
+      setTimeout(function() { translatePage(langCode); }, 500);
+    }
+  }
+
+  // Buka/Tutup Menu Bahasa
+  var langToggle = document.getElementById("langToggle");
+  if(langToggle) {
+    langToggle.onclick = function(event) {
+      event.stopPropagation(); 
+      document.getElementById("langDropdown").classList.toggle("show");
+    };
+  }
+
+  // Tutup menu jika klik sembarang tempat
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('#langToggle')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains('show')) {
+          dropdowns[i].classList.remove('show');
+        }
+      }
+    }
+  });
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

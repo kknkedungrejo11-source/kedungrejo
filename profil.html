@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Desa - Kelurahan Kedungrejo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* MENU BAHASA CUSTOM & WIDGET TERSEMBUNYI */
+  .nav-dropdown { position: relative; display: inline-block; margin-left: 5px; }
+  .nav-dropdown .nav-link { cursor: pointer; display: inline-flex; align-items: center; gap: 5px; user-select: none; }
+  .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 140px; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); z-index: 100; border-radius: 8px; overflow: hidden; top: 100%; right: 0; margin-top: 10px; }
+  .dropdown-content.show { display: block; }
+  .dropdown-content a { color: #333333; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; transition: background 0.3s ease; }
+  .dropdown-content a:hover { background-color: #f0f7f4; color: var(--hijau-tua); }
+  
+  #google_translate_element { position: absolute !important; left: -9999px !important; top: -9999px !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
+  .skiptranslate iframe { display: none !important; }
+  body { top: 0 !important; }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="navbar-left" style="text-decoration: none; color: inherit;">
+    <img src="logo-wonogiri (1).png" alt="Logo Kabupaten Wonogiri" class="logo">
+    <div class="brand-text">
+      <h1>Kelurahan Kedungrejo</h1>
+      <p>Kabupaten Wonogiri</p>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="navbar-right" id="navMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="profil.html" class="nav-link active">Profil Desa</a>
+    <a href="infografis.html" class="nav-link">Infografis</a>
+    <a href="umkm.html" class="nav-link">UMKM</a>
+    <a href="lokasi.html" class="nav-link">Lokasi</a>
+    <a href="berita.html" class="nav-link">Berita</a>
+    <a href="https://dinaspmd.wonogirikab.go.id/ppid/informasi-berkala/" target="_blank" class="nav-link">PPID</a>
+    
+    <!-- MENU BAHASA -->
+    <div class="nav-dropdown">
+      <span class="nav-link" id="langToggle">🌐 Bahasa &#9662;</span>
+      <div class="dropdown-content" id="langDropdown">
+        <a href="javascript:void(0);" onclick="translatePage('id')">Indonesia</a>
+        <a href="javascript:void(0);" onclick="translatePage('en')">English</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero hero-profil">
+  <!-- Background menggunakan foto plang gapura -->
+  <div class="hero-slide" style="background-image: url('DSC08119.jpg'); background-position: center 60%;"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Profil Kelurahan</h2>
+    <p>Pengantar, Batas Wilayah, Geografis, Orbitasi, dan Struktur Pemerintahan Kelurahan Kedungrejo</p>
+  </div>
+</section>
+
+<section class="profil-content">
+  <div class="profil-box">
+    
+    <!-- Bagian Pengantar -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-bottom: 15px;">Pengantar</h2>
+      <p style="text-align: justify; line-height: 1.8;">Kedungrejo merupakan ibu kota Kecamatan Nguntoronadi, Kabupaten Wonogiri, Provinsi Jawa Tengah. Kelurahan ini menjadi pusat pemerintahan dan aktivitas warga di kecamatan, sekaligus salah satu dari 2 kelurahan (bersama Kelurahan Beji) di antara 11 desa/kelurahan yang ada di Kecamatan Nguntoronadi. Kedungrejo memiliki luas wilayah 5,27 km², atau sekitar 8,65% dari total luas Kecamatan Nguntoronadi, dan terbagi menjadi 8 Lingkungan.</p>
+    </div>
+
+    <!-- Bagian Batas Wilayah -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-bottom: 15px;">Batas Wilayah</h2>
+      <p style="margin-bottom: 15px;">Secara geografis, Kelurahan Kedungrejo berbatasan dengan beberapa wilayah berikut:</p>
+      
+      <div style="display: grid; gap: 15px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid var(--hijau-tua);">
+          <h4 style="color: var(--hijau-tua); margin-bottom: 8px;">&#128312; Sebelah Utara</h4>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Desa/Kel:</strong> Desa Wonoharjo</p>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Kecamatan:</strong> Ngadirojo</p>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid var(--hijau-tua);">
+          <h4 style="color: var(--hijau-tua); margin-bottom: 8px;">&#128313; Sebelah Selatan</h4>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Desa/Kel:</strong> Area Waduk Gajah Mungkur</p>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Kecamatan:</strong> Baturetno</p>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid var(--hijau-tua);">
+          <h4 style="color: var(--hijau-tua); margin-bottom: 8px;">&#9654; Sebelah Timur</h4>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Desa/Kel:</strong> Desa Bulurejo</p>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Kecamatan:</strong> Tirtomoyo</p>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid var(--hijau-tua);">
+          <h4 style="color: var(--hijau-tua); margin-bottom: 8px;">&#9664; Sebelah Barat</h4>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Desa/Kel:</strong> Area Waduk Gajah Mungkur</p>
+          <p style="font-size: 0.95rem; color: #555; margin:0;"><strong>Kecamatan:</strong> Wonogiri</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Orbitasi -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-bottom: 15px;">Orbitasi (Jarak Jangkauan)</h2>
+      <p style="margin-bottom: 15px;">Data orbitasi atau jarak tempuh dari Kelurahan Kedungrejo ke pusat-pusat pemerintahan:</p>
+      
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#127970; Jarak ke Kecamatan</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Jarak tempuh</td>
+              <td style="padding: 10px 0; text-align: right;">1,00 Km</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Waktu (bermotor)</td>
+              <td style="padding: 10px 0; text-align: right;">0,25 Jam</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Waktu (non-bermotor)</td>
+              <td style="padding: 10px 0; text-align: right;">0,30 Jam</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: 600;">Kendaraan umum</td>
+              <td style="padding: 10px 0; text-align: right;">Tidak Ada</td>
+            </tr>
+          </table>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#127970; Jarak ke Kabupaten</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Jarak tempuh</td>
+              <td style="padding: 10px 0; text-align: right;">24,40 Km</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Waktu (bermotor)</td>
+              <td style="padding: 10px 0; text-align: right;">1,00 Jam</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Waktu (non-bermotor)</td>
+              <td style="padding: 10px 0; text-align: right;">4,00 Jam</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: 600;">Kendaraan umum</td>
+              <td style="padding: 10px 0; text-align: right;">Ada (6 unit)</td>
+            </tr>
+          </table>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#127970; Jarak ke Provinsi</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Jarak tempuh</td>
+              <td style="padding: 10px 0; text-align: right;">171,40 Km</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Waktu (bermotor)</td>
+              <td style="padding: 10px 0; text-align: right;">6,00 Jam</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Waktu (non-bermotor)</td>
+              <td style="padding: 10px 0; text-align: right;">18,00 Jam</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: 600;">Kendaraan umum</td>
+              <td style="padding: 10px 0; text-align: right;">Ada (4 unit)</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bagian Luas & Penggunaan Wilayah -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-bottom: 15px;">Penggunaan Lahan & Wilayah</h2>
+      <p style="margin-bottom: 15px;">Total luasan wilayah Kelurahan Kedungrejo mencapai <strong>537,84 Ha</strong>. Berikut adalah rincian penggunaan lahan serta kepemilikan lahan pertanian di wilayah ini:</p>
+      
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        
+        <!-- Rekapitulasi Luas Lahan -->
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#128207; Rekapitulasi Lahan</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Tanah Sawah</td>
+              <td style="padding: 10px 0; text-align: right;">249,13 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Tanah Kering</td>
+              <td style="padding: 10px 0; text-align: right;">101,09 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Tanah Basah</td>
+              <td style="padding: 10px 0; text-align: right;">138,63 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Fasilitas Umum</td>
+              <td style="padding: 10px 0; text-align: right;">48,99 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Tanah Perkebunan/Hutan</td>
+              <td style="padding: 10px 0; text-align: right;">0,00 Ha</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: 600; color: var(--hijau-tua);">TOTAL LUAS WILAYAH</td>
+              <td style="padding: 10px 0; text-align: right; font-weight: bold; color: var(--hijau-tua);">537,84 Ha</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Rincian Tanah Sawah & Kering -->
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#127790; Rincian Tipe Lahan</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 8px 0; font-weight: 600;" colspan="2">Rincian Tanah Sawah</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Sawah irigasi teknis</td>
+              <td style="padding: 4px 0; text-align: right;">51,00 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Sawah irigasi ½ teknis</td>
+              <td style="padding: 4px 0; text-align: right;">49,00 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Sawah tadah hujan</td>
+              <td style="padding: 4px 0; text-align: right;">10,50 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Sawah pasang surut</td>
+              <td style="padding: 4px 0; text-align: right;">138,63 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 8px 0; font-weight: 600;" colspan="2">Rincian Tanah Kering & Pertanian</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Tegal/ladang</td>
+              <td style="padding: 4px 0; text-align: right;">22,00 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Pemukiman</td>
+              <td style="padding: 4px 0; text-align: right;">20,00 Ha</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 4px 0 4px 15px;">- Pekarangan</td>
+              <td style="padding: 4px 0; text-align: right;">59,09 Ha</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0 4px 0; font-weight: 600; color: var(--hijau-tua);">Keluarga Pemilik Lahan Pertanian</td>
+              <td style="padding: 8px 0 4px 0; text-align: right; font-weight: bold;">554 Keluarga</td>
+            </tr>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Bagian Iklim & Kondisi Tanah -->
+    <div style="margin-bottom: 40px;">
+      <h2 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-bottom: 15px;">Iklim & Kondisi Tanah</h2>
+      <p style="margin-bottom: 15px;">Berdasarkan pendataan, berikut adalah kondisi iklim dan kesuburan tanah di Kelurahan Kedungrejo:</p>
+      
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        
+        <!-- Kondisi Iklim -->
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#9700; Iklim</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Curah hujan</td>
+              <td style="padding: 10px 0; text-align: right;">324,00 mm</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Jumlah bulan hujan</td>
+              <td style="padding: 10px 0; text-align: right;">5,00 bulan</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Kelembapan</td>
+              <td style="padding: 10px 0; text-align: right;">0,00</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Suhu rata-rata harian</td>
+              <td style="padding: 10px 0; text-align: right;">33,00 &deg;C</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: 600;">Tinggi dari permukaan laut</td>
+              <td style="padding: 10px 0; text-align: right;">121,00 mdl</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Jenis dan Kesuburan Tanah -->
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-top: 4px solid var(--hijau-widget); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="color: var(--hijau-tua); margin-bottom: 15px; font-size: 1.15rem;">&#127806; Jenis & Kesuburan Tanah</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #555;">
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Warna tanah (sebagian besar)</td>
+              <td style="padding: 10px 0; text-align: right;">Merah</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Tekstur tanah</td>
+              <td style="padding: 10px 0; text-align: right;">Lempungan</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Tingkat kemiringan tanah</td>
+              <td style="padding: 10px 0; text-align: right;">30,00 derajat</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eaeaea;">
+              <td style="padding: 10px 0; font-weight: 600;">Lahan kritis</td>
+              <td style="padding: 10px 0; text-align: right;">0,00 Ha</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: 600;">Lahan terlantar</td>
+              <td style="padding: 10px 0; text-align: right;">0,00 Ha</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bagian Struktur Pemerintahan -->
+    <div>
+      <h2 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-bottom: 15px;">Struktur Pemerintahan</h2>
+      <p style="color: #666; font-style: italic;">Halaman struktur pemerintahan sedang dalam tahap pembaruan data.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Kelurahan Kedungrejo</h4>
+      <p>Kabupaten Wonogiri, Jawa Tengah</p>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Pemerintah Kelurahan Kedungrejo. Hak cipta dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- WIDGET GOOGLE TRANSLATE & SCRIPT -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id', 
+      includedLanguages: 'en,id',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translatePage(langCode) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
+      document.getElementById("langDropdown").classList.remove("show");
+    } else {
+      setTimeout(function() { translatePage(langCode); }, 500);
+    }
+  }
+
+  // Buka/Tutup Menu Bahasa
+  var langToggle = document.getElementById("langToggle");
+  if(langToggle) {
+    langToggle.onclick = function(event) {
+      event.stopPropagation(); 
+      document.getElementById("langDropdown").classList.toggle("show");
+    };
+  }
+
+  // Tutup menu jika klik sembarang tempat
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('#langToggle')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains('show')) {
+          dropdowns[i].classList.remove('show');
+        }
+      }
+    }
+  });
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

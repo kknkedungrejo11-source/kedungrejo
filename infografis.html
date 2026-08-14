@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infografis - Kelurahan Kedungrejo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* =========================================================
+     STYLING MENU BAHASA (SISTEM KLIK & DROPDOWN)
+     ========================================================= */
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .nav-dropdown .nav-link {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 100%;
+    right: 0;
+    margin-top: 12px;
+    padding: 6px 0;
+  }
+  .dropdown-content.show {
+    display: block;
+  }
+  .dropdown-content a {
+    color: #1a1a1a;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+  .dropdown-content a:hover {
+    background-color: #f0f7f4;
+    color: var(--hijau-tua);
+  }
+
+  /* Sembunyikan widget asli Google Translate */
+  #google_translate_element {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  .skiptranslate iframe { display: none !important; }
+  body { top: 0 !important; }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="navbar-left" style="text-decoration: none; color: inherit;">
+    <img src="logo-wonogiri (1).png" alt="Logo Kabupaten Wonogiri" class="logo">
+    <div class="brand-text">
+      <h1>Kelurahan Kedungrejo</h1>
+      <p>Kabupaten Wonogiri</p>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="navbar-right" id="navMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="profil.html" class="nav-link">Profil Desa</a>
+    <a href="infografis.html" class="nav-link active">Infografis</a>
+    <a href="umkm.html" class="nav-link">UMKM</a>
+    <a href="lokasi.html" class="nav-link">Lokasi</a>
+    <a href="berita.html" class="nav-link">Berita</a>
+    <a href="https://dinaspmd.wonogirikab.go.id/ppid/informasi-berkala/" target="_blank" class="nav-link">PPID</a>
+    
+    <!-- MENU BAHASA SESUAI CONTOH GAMBAR -->
+    <div class="nav-dropdown">
+      <span class="nav-link" id="langToggle">🌐 Bahasa &#9662;</span>
+      <div class="dropdown-content" id="langDropdown">
+        <a href="javascript:void(0);" onclick="translatePage('id')">Indonesia</a>
+        <a href="javascript:void(0);" onclick="translatePage('en')">English</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero hero-profil">
+  <!-- Background menggunakan foto plang kantor lurah (DSC08009.jpg) -->
+  <div class="hero-slide" style="background-image: url('DSC08009.jpg'); background-position: center 60%;"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Infografis Kelurahan</h2>
+    <p>Data Demografi, Mata Pencaharian, dan Fasilitas Kelurahan Kedungrejo</p>
+  </div>
+</section>
+
+<!-- Konten Infografis -->
+<section class="infografis-content">
+  <div class="info-container">
+    
+    <!-- Jumlah Penduduk -->
+    <div class="info-section">
+      <h3 class="section-title">Demografi & Jumlah Penduduk</h3>
+      <div class="stats-grid">
+        <div class="stat-card primary">
+          <span class="stat-icon">&#128101;</span>
+          <h4>Total Penduduk</h4>
+          <p class="stat-number">2.242 <span>Jiwa</span></p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">&#128104;</span>
+          <h4>Kepala Keluarga (KK)</h4>
+          <p class="stat-number">831 <span>KK</span></p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">&#127806;</span>
+          <h4>Kelompok Tani</h4>
+          <p class="stat-number">8 <span>Poktan</span></p>
+        </div>
+      </div>
+      <div style="margin-top: 15px; text-align: center; color: #666; font-size: 0.95rem;">
+        *(Catatan: Rincian 8 Kelompok Tani tersebut tergabung dalam Gapoktan Kedung Makmur, dapat dilihat dengan mengklik menu Lingkungan di halaman Beranda).*
+      </div>
+    </div>
+
+    <!-- Mata Pencaharian -->
+    <div class="info-section">
+      <h3 class="section-title">Mata Pencaharian Penduduk</h3>
+      <div class="pekerjaan-grid">
+        
+        <div class="pekerjaan-item">
+          <span class="p-icon">&#127806;</span>
+          <div class="p-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+              <h4 style="margin: 0;">Petani / Pekebun</h4>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--hijau-tua);">475 Orang</span>
+            </div>
+            <div class="progress-bar"><div class="progress" style="width: 34%;"></div></div>
+          </div>
+        </div>
+        
+        <div class="pekerjaan-item">
+          <span class="p-icon">&#127970;</span>
+          <div class="p-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+              <h4 style="margin: 0;">Karyawan Swasta</h4>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--hijau-tua);">364 Orang</span>
+            </div>
+            <div class="progress-bar"><div class="progress" style="width: 26%;"></div></div>
+          </div>
+        </div>
+
+        <div class="pekerjaan-item">
+          <span class="p-icon">&#128188;</span>
+          <div class="p-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+              <h4 style="margin: 0;">Wiraswasta / Pedagang</h4>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--hijau-tua);">341 Orang</span>
+            </div>
+            <div class="progress-bar"><div class="progress" style="width: 24%;"></div></div>
+          </div>
+        </div>
+        
+        <div class="pekerjaan-item">
+          <span class="p-icon">&#128736;</span>
+          <div class="p-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+              <h4 style="margin: 0;">Lainnya</h4>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--hijau-tua);">127 Orang</span>
+            </div>
+            <div class="progress-bar"><div class="progress" style="width: 9%;"></div></div>
+          </div>
+        </div>
+
+        <div class="pekerjaan-item">
+          <span class="p-icon">&#128110;</span>
+          <div class="p-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+              <h4 style="margin: 0;">PNS / TNI / Polri</h4>
+              <span style="font-size: 0.95rem; font-weight: 700; color: var(--hijau-tua);">94 Orang</span>
+            </div>
+            <div class="progress-bar"><div class="progress" style="width: 7%;"></div></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Tempat Ibadah -->
+    <div class="info-section">
+      <h3 class="section-title">Fasilitas Tempat Ibadah</h3>
+      <div class="fasilitas-grid">
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=Masjid+Nur+Assalam+Melikan+Kedungrejo+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#128332;</span>
+          <div class="fasilitas-details">
+            <h4>Masjid Nur Assalam</h4>
+            <span class="badge islam">Islam</span>
+            <p>Dusun Melikan, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Masjid+Al+Muhajirin+Betal+Pucung+Kedungrejo+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#128332;</span>
+          <div class="fasilitas-details">
+            <h4>Masjid Al Muhajirin Betal</h4>
+            <span class="badge islam">Islam</span>
+            <p>Dusun Pucung, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Masjid+Al+Khoir+Kwangen+Kedungrejo+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#128332;</span>
+          <div class="fasilitas-details">
+            <h4>Masjid Al Khoir</h4>
+            <span class="badge islam">Islam</span>
+            <p>Dusun Kwangen, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Masjid+Darussalam+Godang+Kedungrejo+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#128332;</span>
+          <div class="fasilitas-details">
+            <h4>Masjid Darussalam Godang</h4>
+            <span class="badge islam">Islam</span>
+            <p>Dusun Godang, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Gereja+Katolik+Santa+Maria+Assumta+Kwangen+Kedungrejo+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#9906;</span>
+          <div class="fasilitas-details">
+            <h4>Gereja Katolik Santa Maria Assumta</h4>
+            <span class="badge katolik">Katolik</span>
+            <p>Dusun Kwangen, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=GKJ+Baturetno+Pepanthan+Kedungrejo+Pucung+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#9906;</span>
+          <div class="fasilitas-details">
+            <h4>GKJ Baturetno Pepanthan Kedungrejo</h4>
+            <span class="badge kristen">Kristen</span>
+            <p>Dusun Pucung, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Gereja+Isa+Almasih+GIA+Kudus+Nguntoronadi+Pucung+Kedungrejo+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#9906;</span>
+          <div class="fasilitas-details">
+            <h4>Gereja Isa Almasih "GIA Kudus"</h4>
+            <span class="badge kristen">Kristen</span>
+            <p>Dusun Pucung, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=GPDI+Kedungrejo+Godang+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#9906;</span>
+          <div class="fasilitas-details">
+            <h4>GPDI Kedungrejo</h4>
+            <span class="badge kristen">Kristen</span>
+            <p>Dusun Godang, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Gereja+Bethel+Indonesia+GBI+Melikan+Kedungrejo+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#9906;</span>
+          <div class="fasilitas-details">
+            <h4>Gereja Bethel Indonesia (GBI)</h4>
+            <span class="badge kristen">Kristen</span>
+            <p>Dusun Melikan, Kedungrejo, Kec. Nguntoronadi, Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+      </div>
+      
+      <div style="margin-top: 20px; background: #fff5f5; border-left: 4px solid #e8837a; padding: 15px; border-radius: 8px;">
+        <p style="color: #666; font-size: 0.95rem; margin: 0;"><strong>Catatan:</strong> Belum terdeteksi adanya bangunan fisik tempat ibadah (Pura, Vihara, Klenteng) untuk agama Hindu, Buddha, & Kong Hu Cu di wilayah Kelurahan Kedungrejo.</p>
+      </div>
+    </div>
+
+    <!-- Fasilitas Pendidikan -->
+    <div class="info-section">
+      <h3 class="section-title">Fasilitas Pendidikan</h3>
+      <div class="fasilitas-grid">
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=TK+NEGERI+PEMBINA+NGUNTORONADI+Kedungrejo+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#127979;</span>
+          <div class="fasilitas-details">
+            <h4>TK NEGERI PEMBINA NGUNTORONADI</h4>
+            <span class="badge abu">Belum Terakreditasi</span>
+            <p>JL. WONOGIRI - PACITAN KM 24 Kedungrejo Kec. Nguntoronadi Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SD+N+1+KEDUNGREJO+Melikan+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#127979;</span>
+          <div class="fasilitas-details">
+            <h4>SD N 1 KEDUNGREJO</h4>
+            <span class="badge abu">Terakreditasi B</span>
+            <p>Melikan KEDUNGREJO Kec. Nguntoronadi Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SD+N+2+KEDUNGREJO+Pucung+Nguntoronadi+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#127979;</span>
+          <div class="fasilitas-details">
+            <h4>SD N 2 KEDUNGREJO</h4>
+            <span class="badge abu">Terakreditasi B</span>
+            <p>Pucung Kedungrejo Kec. Nguntoronadi Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SMP+NEGERI+1+NGUNTORONADI+Kedungrejo+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#127979;</span>
+          <div class="fasilitas-details">
+            <h4>SMP NEGERI 1 NGUNTORONADI</h4>
+            <span class="badge abu">Terakreditasi A</span>
+            <p>Jl. Raya Wonogiri-Pacitan Km. 24 Kedungrejo Kec. Nguntoronadi Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SMAN+1+NGUNTORONADI+Kedungrejo+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#127979;</span>
+          <div class="fasilitas-details">
+            <h4>SMAN 1 NGUNTORONADI</h4>
+            <span class="badge abu">Terakreditasi A</span>
+            <p>JL. Raya Solo-Baturetno KM. 20 Kedungrejo Kec. Nguntoronadi Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=SMKS+RISTEK+NGUNTORONADI+Kedungrejo+Wonogiri" target="_blank" class="fasilitas-card">
+          <span class="fasilitas-icon">&#127979;</span>
+          <div class="fasilitas-details">
+            <h4>SMKS RISTEK NGUNTORONADI</h4>
+            <span class="badge abu">Terakreditasi B</span>
+            <p>JL. RAYA WONOGIRI - PACITAN KM 29,5 Kedungrejo Kec. Nguntoronadi Kab. Wonogiri Jawa Tengah</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Fasilitas Kesehatan (Diperbarui dengan Google Maps Embed) -->
+    <div class="info-section">
+      <h3 class="section-title">Fasilitas Kesehatan</h3>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 15px;">
+        
+        <!-- PUSKESMAS -->
+        <div style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+          <div style="width: 100%; height: 180px; background: #eee;">
+            <iframe src="https://www.google.com/maps?q=Puskesmas+Nguntoronadi,Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 1.5rem; margin-right: 10px;">&#127973;</span>
+              <h4 style="margin: 0; color: var(--hijau-tua); font-size: 1.1rem;">Puskesmas Nguntoronadi</h4>
+            </div>
+            <span class="badge" style="background: #ffe4e6; color: #9f1239; width: fit-content; margin-bottom: 12px;">Puskesmas</span>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+              Melikan, Kedungrejo, Kec. Nguntoronadi, Kabupaten Wonogiri, Jawa Tengah
+            </p>
+            <a href="https://share.google/LflA5dki8J5psTY2e" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; border: 1px solid #d1e7dd; transition: all 0.3s ease;">
+              &#10148; Buka di Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- POLINDES -->
+        <div style="background: #fff; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 8px rgba(0,0,0,0.03); display: flex; flex-direction: column; overflow: hidden;">
+          <div style="width: 100%; height: 180px; background: #eee;">
+            <iframe src="https://www.google.com/maps?q=Pucung,+Kedungrejo,+Nguntoronadi,+Wonogiri&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 1.5rem; margin-right: 10px;">&#127973;</span>
+              <h4 style="margin: 0; color: var(--hijau-tua); font-size: 1.1rem;">Poliklinik Desa Pucung</h4>
+            </div>
+            <span class="badge" style="background: #e0f2fe; color: #0369a1; width: fit-content; margin-bottom: 12px;">Poliklinik</span>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+              Dusun Pucung, Kedungrejo, Kec. Nguntoronadi, Kabupaten Wonogiri, Jawa Tengah
+            </p>
+            <a href="https://maps.app.goo.gl/DDcW9aZGhQfwgKJ49" target="_blank" style="display: block; text-align: center; background: #f0f7f4; color: var(--hijau-widget); padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; border: 1px solid #d1e7dd; transition: all 0.3s ease;">
+              &#10148; Buka di Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Kelurahan Kedungrejo</h4>
+      <p>Kabupaten Wonogiri, Jawa Tengah</p>
+    </div>
+  </div>
+  <p class="footer-copy">KKN Tim 2 Universitas Diponegoro 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- ========================================================= -->
+<!-- WIDGET GOOGLE TRANSLATE (TERSEMBUNYI) & SCRIPT MENU KLIK  -->
+<!-- ========================================================= -->
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id', 
+      includedLanguages: 'en,id',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  // Fungsi Penerjemah ketika opsi bahasa diklik
+  function translatePage(langCode) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
+      // Menutup kotak dropdown setelah dipilih
+      document.getElementById("langDropdown").classList.remove("show");
+    } else {
+      setTimeout(function() { translatePage(langCode); }, 500);
+    }
+  }
+
+  // Fungsi Buka/Tutup Menu Dropdown Bahasa
+  var langToggle = document.getElementById("langToggle");
+  if(langToggle) {
+    langToggle.onclick = function(event) {
+      event.stopPropagation(); 
+      document.getElementById("langDropdown").classList.toggle("show");
+    };
+  }
+
+  // Menutup menu jika user mengklik area lain di luar menu
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('#langToggle')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains('show')) {
+          dropdowns[i].classList.remove('show');
+        }
+      }
+    }
+  });
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

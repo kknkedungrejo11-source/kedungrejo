@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelurahan Kedungrejo - Wonogiri</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* =========================================================
+     MENU BAHASA CUSTOM (SISTEM KLIK)
+     ========================================================= */
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px; 
+  }
+  
+  .nav-dropdown .nav-link {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none; /* Mencegah teks terblok biru saat diklik */
+  }
+
+  .dropdown-content {
+    display: none; /* Disembunyikan secara default */
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  /* Class tambahan untuk memunculkan menu lewat Javascript */
+  .dropdown-content.show {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f0f7f4; 
+    color: var(--hijau-tua);
+  }
+
+  /* =========================================================
+     TRIK MENYEMBUNYIKAN WIDGET GOOGLE TRANSLATE
+     ========================================================= */
+  #google_translate_element {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  .skiptranslate iframe {
+    display: none !important; 
+  }
+  
+  body {
+    top: 0 !important; 
+  }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="navbar-left" style="text-decoration: none; color: inherit;">
+    <img src="logo-wonogiri (1).png" alt="Logo Kabupaten Wonogiri" class="logo">
+    <div class="brand-text">
+      <h1>Kelurahan Kedungrejo</h1>
+      <p>Kabupaten Wonogiri</p>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="navbar-right" id="navMenu">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="profil.html" class="nav-link">Profil Desa</a>
+    <a href="infografis.html" class="nav-link">Infografis</a>
+    <a href="umkm.html" class="nav-link">UMKM</a>
+    <a href="lokasi.html" class="nav-link">Lokasi</a>
+    <a href="berita.html" class="nav-link">Berita</a>
+    <a href="https://dinaspmd.wonogirikab.go.id/ppid/informasi-berkala/" target="_blank" class="nav-link">PPID</a>
+    
+    <!-- MENU BAHASA BARU (SISTEM KLIK) -->
+    <div class="nav-dropdown">
+      <span class="nav-link" id="langToggle">🌐 Bahasa &#9662;</span>
+      <div class="dropdown-content" id="langDropdown">
+        <a href="javascript:void(0);" onclick="translatePage('id')">Indonesia</a>
+        <a href="javascript:void(0);" onclick="translatePage('en')">English</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-slide" style="background-image: url('DSC08000.jpeg');"></div>
+  <div class="hero-overlay"></div>
+
+  <button class="arrow arrow-left" id="prevSlide" aria-label="Sebelumnya">&#8592;</button>
+  <button class="arrow arrow-right" id="nextSlide" aria-label="Berikutnya">&#8594;</button>
+
+  <div class="hero-content">
+    <h2>Selamat Datang</h2>
+    <h3>Website Kelurahan Kedungrejo</h3>
+    <p>Sumber informasi terbaru tentang pemerintahan di Kelurahan Kedungrejo</p>
+  </div>
+</section>
+
+<section class="jelajahi-desa">
+  <div class="jelajahi-left">
+    <h2>JELAJAHI DESA</h2>
+    <p>Melalui website ini Anda dapat menjelajahi segala hal yang terkait dengan desa. Aspek pemerintahan, penduduk, demografi, potensi desa, dan juga berita tentang desa.</p>
+  </div>
+  <div class="jelajahi-right">
+    <a href="profil.html" class="jelajahi-card">
+      <span class="card-icon">&#127963;</span>
+      <h4>PROFIL DESA</h4>
+    </a>
+    <a href="infografis.html" class="jelajahi-card">
+      <span class="card-icon">&#128200;</span>
+      <h4>INFOGRAFIS</h4>
+    </a>
+    <a href="lokasi.html" class="jelajahi-card">
+      <span class="card-icon">&#128205;</span>
+      <h4>LOKASI</h4>
+    </a>
+    <a href="https://dinaspmd.wonogirikab.go.id/ppid/informasi-berkala/" target="_blank" class="jelajahi-card">
+      <span class="card-icon">&#128196;</span>
+      <h4>PPID</h4>
+    </a>
+  </div>
+</section>
+
+<section class="profil-lurah">
+  <div class="lurah-container">
+    <div class="lurah-image">
+      <img src="image_852e16.png" alt="Foto Kepala Lurah Haryono">
+    </div>
+    <div class="lurah-info">
+      <h3>Kepala Kelurahan</h3>
+      <h2>Haryono</h2>
+      <p>"Selamat datang di website resmi Kelurahan Kedungrejo. Kami berkomitmen untuk memberikan pelayanan terbaik dan transparan bagi seluruh warga demi terwujudnya masyarakat yang sejahtera dan harmonis."</p>
+    </div>
+  </div>
+</section>
+
+<section class="info-wilayah">
+  <div class="wilayah-container">
+    <div class="wilayah-header">
+      <h2>Informasi Wilayah</h2>
+      <p>Kelurahan Kedungrejo secara administratif terbagi menjadi <strong>8 Lingkungan</strong> dan <strong>20 Rukun Tetangga (RT)</strong>.</p>
+    </div>
+    <div class="wilayah-content">
+      <div class="lingkungan-list">
+        <div class="lingkungan-item" onclick="openLingkungan('Nadi')" style="cursor:pointer;">&#128205; Lingkungan Nadi</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Melikan')" style="cursor:pointer;">&#128205; Lingkungan Melikan</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Pucung')" style="cursor:pointer;">&#128205; Lingkungan Pucung</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Kwangen')" style="cursor:pointer;">&#128205; Lingkungan Kwangen</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Godang')" style="cursor:pointer;">&#128205; Lingkungan Godang</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Joyojiroto')" style="cursor:pointer;">&#128205; Lingkungan Joyojiroto</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Kwarasan')" style="cursor:pointer;">&#128205; Lingkungan Kwarasan</div>
+        <div class="lingkungan-item" onclick="openLingkungan('Tukul')" style="cursor:pointer;">&#128205; Lingkungan Tukul</div>
+      </div>
+      <div class="rt-stat">
+        <span class="rt-number">20</span>
+        <span class="rt-label">Total RT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h4>Kelurahan Kedungrejo</h4>
+      <p>Kabupaten Wonogiri, Jawa Tengah</p>
+    </div>
+  </div>
+  <p class="footer-copy">KKN Tim 2 Universitas Diponegoro 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- MODAL LINGKUNGAN -->
+<div id="lingkunganModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeLingkungan()">&times;</span>
+    <h2 id="modalTitle">Lingkungan</h2>
+    
+    <img id="modalImage" src="" alt="Foto Lingkungan" style="width: 100%; border-radius: 8px; margin-top: 15px; display: none; object-fit: cover; max-height: 250px;">
+    
+    <div id="modalMapContainer" style="width: 100%; height: 250px; border-radius: 8px; overflow: hidden; margin-top: 15px; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <iframe id="modalMap" src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <div style="margin-top: 20px;">
+      <h3 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 5px; font-size: 1.1rem; margin-bottom: 10px;">Kepengurusan RT & RW</h3>
+      <p style="font-weight: 700; color: var(--hijau-widget); font-size: 1.05rem;" id="modalRW"></p>
+      <ul id="modalRTList" style="margin-left: 20px; margin-top: 8px; line-height: 1.6; color: #444; font-size: 0.95rem;"></ul>
+    </div>
+
+    <div style="margin-top: 25px;">
+      <h3 style="color: var(--hijau-tua); border-bottom: 2px solid #eaeaea; padding-bottom: 5px; font-size: 1.1rem; margin-bottom: 10px;">Kelompok Tani (Poktan)</h3>
+      <p style="color: #444; font-size: 1rem;"><strong id="modalPoktanName"></strong></p>
+      <p style="color: #666; font-size: 0.9rem; margin-top: 4px;">Ketua: <span id="modalPoktanKetua" style="font-weight: 600;"></span></p>
+    </div>
+    
+    <div style="margin-top: 25px; background: #eef5f2; padding: 15px; border-radius: 8px; border: 1px solid #cfe4da;">
+      <p style="color: var(--hijau-tua); font-size: 0.85rem; margin: 0; text-align: center;">Dinaungi oleh <strong>Gapoktan Kedungrejo "Kedung Makmur"</strong><br>(Ketua: Pak Jaimin)</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- WIDGET GOOGLE TRANSLATE (TERSEMBUNYI) & SCRIPT TRIGGER    -->
+<!-- ========================================================= -->
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id', 
+      includedLanguages: 'en,id',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  // Fungsi Pemicu Translasi
+  function translatePage(langCode) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
+      // Menutup menu dropdown setelah pilihan diklik
+      document.getElementById("langDropdown").classList.remove("show");
+    } else {
+      setTimeout(function() { translatePage(langCode); }, 500);
+    }
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // Script Buka/Tutup Menu Bahasa (Sistem Klik)
+  document.getElementById("langToggle").onclick = function(event) {
+    event.stopPropagation(); // Mencegah klik bocor ke window
+    document.getElementById("langDropdown").classList.toggle("show");
+  }
+
+  // Script Data Lingkungan
+  const dataLingkungan = {
+    'Nadi': { rw: 'RW.01 (Indang Sriyati)', rt: ['RT.01: Sigit Setyawan', 'RT.02: Tarmadi', 'RT.03: Sulimin'], poktan: 'Makmur', ketua: 'Pak Kardi', image: 'DSC08016.jpg' },
+    'Melikan': { rw: 'RW.02 (Supriyadi)', rt: ['RT.01: Slamet', 'RT.02: Supriyadi', 'RT.03: Kardi', 'RT.04: Sriyono'], poktan: 'Multi Rejeki', ketua: 'Pak Katyo', image: 'DSC08128.jpg' },
+    'Pucung': { rw: 'RW.03 (Sumarno)', rt: ['RT.01: Eko Purwanto', 'RT.02: Joko Widodo'], poktan: 'Tani Subur', ketua: 'Pak Bambang', image: 'pucung.jpg' },
+    'Kwangen': { rw: 'RW.04 (Sutrisno)', rt: ['RT.01: N.A Suratmo', 'RT.02: Joko Budi Santoso'], poktan: 'Tani Makmur', ketua: 'Pak Sutrisno', image: 'DSC08133.jpg' },
+    'Godang': { rw: 'RW.05 (Amirudin)', rt: ['RT.01: Suyatman', 'RT.02: Tukiman', 'RT.03: Sunarto'], poktan: 'Margo Rukun', ketua: 'Pak Samsuri', image: 'DSC08417.jpg' },
+    'Joyojiroto': { rw: 'RW.06 (Sarimo)', rt: ['RT.01: Daud Eko Sucipto', 'RT.02: Sunar'], poktan: 'Markati Ajune Tani Sandang', ketua: 'Pak Sunanto', image: 'DSC09596.jpg' },
+    'Kwarasan': { rw: 'RW.07 (Pujiharso)', rt: ['RT.01: Yanto', 'RT.02: Haryono'], poktan: 'Sendang Panguripan', ketua: 'Pak Sugino', image: 'DSC08128.jpg' },
+    'Tukul': { rw: 'RW.08 (Sugito)', rt: ['RT.01: Sumarso', 'RT.02: Paimin'], poktan: 'Sari Tani', ketua: 'Pak Sutarno', image: 'DSC08413.jpg' }
+  };
+
+  function openLingkungan(nama) {
+    document.getElementById('modalTitle').innerText = 'Lingkungan ' + nama;
+    const modalImg = document.getElementById('modalImage');
+    if (dataLingkungan[nama].image) { modalImg.src = dataLingkungan[nama].image; modalImg.style.display = 'block'; } else { modalImg.style.display = 'none'; modalImg.src = ''; }
+    document.getElementById('modalRW').innerText = 'Ketua ' + dataLingkungan[nama].rw;
+    let rtHTML = ''; dataLingkungan[nama].rt.forEach(rt => { rtHTML += '<li>' + rt + '</li>'; });
+    document.getElementById('modalRTList').innerHTML = rtHTML;
+    document.getElementById('modalPoktanName').innerText = 'Poktan ' + dataLingkungan[nama].poktan;
+    document.getElementById('modalPoktanKetua').innerText = dataLingkungan[nama].ketua;
+    document.getElementById('lingkunganModal').style.display = 'block';
+  }
+
+  function closeLingkungan() {
+    document.getElementById('lingkunganModal').style.display = 'none';
+  }
+
+  // Script menutup pop-up (Modal & Menu Bahasa) jika klik di sembarang tempat
+  window.onclick = function(event) {
+    let modal = document.getElementById('lingkunganModal');
+    if (event.target == modal) { closeLingkungan(); }
+
+    if (!event.target.matches('#langToggle')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
